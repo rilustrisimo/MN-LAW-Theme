@@ -84,13 +84,15 @@ if ( have_posts() ) : ?>
 									$i = get_fields($it->ID);
 							?>
 							<div class="col-md-4 team__item">
+								<a href="<?php echo get_permalink($it->ID); ?>">
 								<div class="team__item-container">
 									<div class="team__item-image">
 										<div class="team__item-image-container"><img src="<?php echo $i['image']['url']; ?>" class="team__item-image-img"></div>
 									</div>
 									<div class="team__item-title"><?php echo $i['name']; ?></div>
-									<div class="team__item-description"><div><?php echo wp_trim_words($i['description'], 50, '...'); ?></div></div>
+									<div class="team__item-description"><div><?php echo wp_trim_words($i['description'], 50, '... <u>read more</u>'); ?></div></div>
 								</div>
+								</a>
 							</div>
 							<?php endforeach; ?>
 						</div>
