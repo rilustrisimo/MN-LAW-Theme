@@ -54,6 +54,17 @@ class Theme {
             'header'        => array(
                 // acf name => front end text
             )
+        ),
+        array(
+            'post_type'		=> 'lawyers',
+            'singular_name' => 'Lawyer',
+            'plural_name'	=> 'Lawyers',
+            'menu_icon' 	=> 'dashicons-universal-access',
+            'supports'		=> array( 'title', 'thumbnail'),
+            //'title_acf'     => 'field_650cf3eacc30d',
+            'header'        => array(
+                // acf name => front end text
+            )
         )
     );
     
