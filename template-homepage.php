@@ -19,6 +19,7 @@ $practice = get_field('practice_areas', get_the_ID());
 $aboutus = get_field('about_us', get_the_ID());
 $team = get_field('lawyers', get_the_ID());
 $contact = get_field('contact', get_the_ID());
+$theme = new Theme();
 
 if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) { the_post(); ?>
@@ -70,7 +71,11 @@ if ( have_posts() ) : ?>
 				<section id="team" class="section team">
 					<h1><?php echo $team['title']; ?></h1>
 					<?php
+						$lawyers = $theme->createQuery('lawyers');
+						var_dump($lawyers->posts);
 						$items = $team['lawyer_items'];
+						
+						
 					?>
 
 					<div class="container">
