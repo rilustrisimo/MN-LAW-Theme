@@ -90,8 +90,8 @@ $permalink = get_permalink();
 		<?php if ( $is_single ) : ?>
 			<div class="blog-single__content padding-top">
 				<div itemprop="articleBody">
+					<?php echo get_field('description', get_the_ID()); ?>
 					<?php the_content(); ?>
-					test
 				</div>
 <!--				<div class="margin-top">--><?php //qed_render_post_pagination(); ?><!--</div>-->
 				<?php
