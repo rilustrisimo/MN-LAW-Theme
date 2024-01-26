@@ -71,7 +71,7 @@ if ( have_posts() ) : ?>
 				<section id="team" class="section team">
 					<h1><?php echo $team['title']; ?></h1>
 					<?php
-						$lawyers = $theme->createQuery('lawyers');
+						$lawyers = $theme->createQuery('lawyers', array(), -1, 'date', 'ASC');
 						$items = $lawyers->posts;
 						
 					?>
@@ -89,7 +89,7 @@ if ( have_posts() ) : ?>
 										<div class="team__item-image-container"><img src="<?php echo $i['image']['url']; ?>" class="team__item-image-img"></div>
 									</div>
 									<div class="team__item-title"><?php echo $i['name']; ?></div>
-									<div class="team__item-description"><div><?php echo $i['description']; ?></div></div>
+									<div class="team__item-description"><div><?php echo wp_trim_words($i['description'], 50, '...'); ?></div></div>
 								</div>
 							</div>
 							<?php endforeach; ?>
