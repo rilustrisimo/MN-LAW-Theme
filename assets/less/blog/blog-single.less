@@ -1,0 +1,176 @@
+.blog-single {
+    &__content {
+        p {
+            font-family: @roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: .1em;
+            color: @main-color1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            text-align: left;
+            font-style: normal;
+            margin: 25px 0;
+        }
+
+        .social-share {
+            &__title {
+                display: block;
+                color: @main-color1;
+                font-family: @roboto;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: center;
+                margin-top: 60px;
+            }
+        }
+
+        ul {
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto 20px;
+            padding-left: 20px;
+            list-style: none;
+
+            li {
+                padding-left: 15px;
+                text-align: left;
+                font-family: @roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: .1em;
+                color: @main-color1;
+                margin-bottom: 20px;
+
+                &:before {
+                    content: "\25CF";
+                    color: @main-color1;
+                    font-size: inherit;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em
+                }
+
+                ul {
+                    margin: 15px 0 0;
+
+                    li {
+
+                        &:before {
+                            content: "\25CB";
+                            color: @main-color1;
+                            font-size: inherit;
+                            display: inline-block;
+                            width: 1em;
+                            margin-left: -1em
+                        }
+                    }
+                }
+            }
+        }
+
+        ol {
+            max-width: 750px;
+            width: 100%;
+            margin: 0 auto 20px;
+            padding-left: 10px;
+            list-style: none;
+            counter-reset: li;
+
+            li {
+                counter-increment: li;
+                padding-left: 15px;
+                text-align: left;
+                font-family: @roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: .1em;
+                color: @main-color1;
+                margin-bottom: 20px;
+
+                &:before {
+                    content: '.'counter(li);
+                    color: @main-color1;
+                    font-family: @inter;
+                    font-weight: 700;
+                    font-style: normal;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1.5em;
+                    margin-right: 0.5em;
+                    text-align: right;
+                    direction: rtl;
+                }
+
+                ol {
+                    margin: 15px 0 0;
+                    list-style: none;
+                    counter-reset: lil;
+
+                    li {
+                        counter-increment: lil;
+
+                        &:before {
+                            content: '.'counter(lil, lower-roman);
+                            color: @main-color1;
+                            font-family: @inter;
+                            font-weight: 700;
+                            font-style: italic;
+                            display: inline-block;
+                            width: 1em;
+                            margin-left: -1.5em;
+                            margin-right: 0.5em;
+                            text-align: right;
+                            direction: rtl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.addtoany_share_save_container {
+    text-align: center;
+    margin: 45px 0!important;
+}
+
+.blog-meta {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: @inter;
+            font-weight: 400;
+            font-size: 12px;
+            color: @main-color3;
+            padding: 0;
+            margin: 0 15px 0 0;
+            letter-spacing: .1em;
+
+            span {
+                color: @main-color2;
+            }
+
+            &::before {
+                content:'';
+                display: none;
+            }
+        }
+    }
+}

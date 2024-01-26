@@ -1,0 +1,128 @@
+body {
+
+    &.archive {
+        .layout-content {
+            margin-top: 77px;
+        }
+
+        #header-title-block {
+            display: none;
+        }
+    }
+
+    &.single {
+
+        .blog-header  {
+            height: 77px;
+            line-height: 77px;
+            background-color: @main-color4;
+
+            .row > div {
+                max-height: 77px;
+            }
+
+            &-title {
+                font-family: @inter;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                color: @main-color1;
+                .mix-center-text();
+                line-height: normal;
+                justify-content: left;
+            }
+
+            .breadcrumbs {
+                ul {
+                    li {
+                        font-family: @inter;
+                        font-size: 9px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        letter-spacing: .1em;
+                        color: @main-color1;
+                        max-width: 400px;
+                        line-height: normal;
+                        text-align: left;
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        &.active {
+                            text-decoration: underline;
+                        }
+
+                        a {
+                            font-family: @inter;
+                            font-size: 9px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            letter-spacing: .1em;
+                            color: @main-color1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .layout-container {
+            margin-top: 77px;
+
+            .page-single-narrow {
+                margin-bottom: 0;
+
+                .nc_socialPanel {
+
+                    .twitter {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #429cd6 !important;
+                        }
+                    }
+
+                    .swp_fb {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #3a589e !important;
+                        }
+                    }
+
+                    .linkedIn {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #0d77b7 !important;
+                        }
+                    }
+
+                    .googlePlus {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #df4b37 !important;
+                        }
+                    }
+
+                    .nc_pinterest {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #cd2029 !important;
+                        }
+                    }
+
+                    .swp_stumbleupon {
+                        background: #ffffff !important;
+
+                        .iconFiller {
+                            color: #ef5025 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
