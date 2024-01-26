@@ -90,6 +90,10 @@ $permalink = get_permalink();
 		<?php if ( $is_single ) : ?>
 			<div class="blog-single__content padding-top">
 				<div itemprop="articleBody">
+					<?php
+					$img = get_field('image', get_the_ID());
+					?>
+					<div class="articleBody__image"><img src="<?php echo $img['url']; ?>"></div>
 					<?php echo get_field('description', get_the_ID()); ?>
 					<?php the_content(); ?>
 				</div>
