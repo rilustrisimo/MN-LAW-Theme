@@ -72,16 +72,16 @@ if ( have_posts() ) : ?>
 					<h1><?php echo $team['title']; ?></h1>
 					<?php
 						$lawyers = $theme->createQuery('lawyers');
-						var_dump($lawyers->posts);
-						$items = $team['lawyer_items'];
-						
+						$items = $lawyers->posts;
 						
 					?>
 
 					<div class="container">
 						<div class="row slick-items-lawyer">
 							<?php 
-								foreach($items as $i): 
+								foreach($items as $it): 
+
+									$i = get_fields($it->ID);
 							?>
 							<div class="col-md-4 team__item">
 								<div class="team__item-container">
