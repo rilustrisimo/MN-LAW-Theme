@@ -61,7 +61,8 @@ class Theme {
             'plural_name'	=> 'Lawyers',
             'menu_icon' 	=> 'dashicons-universal-access',
             'supports'		=> array( 'title', 'thumbnail'),
-            //'title_acf'     => 'field_650cf3eacc30d',
+            'taxonomies'    => array(),
+            'title_acf'     => '',
             'header'        => array(
                 // acf name => front end text
             )
