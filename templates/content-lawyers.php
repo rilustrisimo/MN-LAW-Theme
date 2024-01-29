@@ -57,10 +57,14 @@ $permalink = get_permalink();
 				}
 
 				?>
+				
 				<ul>
+					<li><?php echo get_field('position', get_the_ID()); ?></li>
+					<!--
 					<li>By <span><?php echo get_the_author_meta('first_name').' '.get_the_author_meta('last_name'); ?></span></li>
 					<li>In <span><?php echo $category_names; ?></span></li>
 					<li>Posted <span><?php echo get_the_date(); ?></span></li>
+			-->
 				</ul>
 			</div>
 
