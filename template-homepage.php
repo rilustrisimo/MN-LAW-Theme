@@ -91,7 +91,7 @@ if ( have_posts() ) : ?>
 									</div>
 									<div class="team__item-title"><?php echo $i['name']; ?></div>
 									<div class="team__item-description">
-										<div><?php echo $i['position']; ?></div>
+										<div><?php echo (isset($i['position']))?$i['position']:''; ?></div>
 										<div><?php echo wp_trim_words($i['description'], 30, '... <u>read more</u>'); ?></div>
 									</div>
 								</div>
